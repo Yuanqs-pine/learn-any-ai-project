@@ -1,0 +1,40 @@
+# ===== Runtime learning ledgers (created per target project by the skill at runtime) =====
+# A skill never ships a ledger. If you use this skill inside this repo to learn a project,
+# the generated .engine/ may contain real paths & progress — commit it only if it holds
+# no sensitive info (see SKILL.md §11.2 / §14).
+.engine/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# ===== Node =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ===== Env & secrets (never commit) =====
+.env
+.env.*
+!.env.example
+
+# ===== OS / editors =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ===== Temp / backups / drafts =====
+*.tmp
+*.bak
+*.log
+temp/
+draft/
