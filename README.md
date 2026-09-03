@@ -44,24 +44,36 @@ learn-any-ai-project/
 
 ## Quick start
 
-### 1. Install the skill for your Agent
+### Option A (recommended) — install with one prompt
 
-Copy (or symlink) `skills/learn-any-ai-project/SKILL.md` — Chinese users use `SKILL.md`, English users use `SKILL.en.md` (same skill, same rules) — into your agent's skill directory (e.g. `~/.workbuddy/skills/learn-any-ai-project/SKILL.md`), then reload your agent.
+In your AI Agent's chat (any agent with web access and file-writing), paste the prompt below. The Agent downloads and installs the skill for you — no manual file copying:
 
-> Both files are self-contained single files: no extra scripts, no bundled assets. You can also just drop the file next to a project repo and reference it there.
+```
+Please install the "learn-any-ai-project" skill:
+1. Download it from https://github.com/Yuanqs-pine/learn-any-ai-project — take SKILL.md (Chinese) or SKILL.en.md (English) under skills/learn-any-ai-project/.
+2. Save it to your agent's skill directory, e.g. ~/.workbuddy/skills/learn-any-ai-project/SKILL.md (adjust to your agent's location).
+3. Reload the skill, then reply "learn-any-ai-project installed".
+```
 
-### 2. Learn your first AI project
+> If your Agent has a skill marketplace / installer, you can also search for "learn-any-ai-project" and install it in one click.
 
-In a project directory you want to learn:
+### Option B — install manually
 
-1. Say: *"Learn this project systematically"* (or any trigger phrase: "generate a learning plan for this project", "build learning docs in handbook style").
-2. The skill runs **S0 Profile** — it probes the project and asks you a few questions (type, scale, stack, stage, goal, environment constraints, sharing requirement, output language).
-3. It derives the chapter map from first principles and renders **LEARN.md** into the project root.
-4. **You review it** at the review gate before any code is written — adjust chapters if they don't fit.
-5. Then it walks you through chapter by chapter (S3 → S4 → S5): environment first (you start the daemon/GUI services yourself), then each chapter with generation → local green-check → hands-on points → state sync.
-6. You close with a **blind rehearsal** — run the minimal chain end-to-end with all commands hidden. Pass it and you have genuinely learned the project.
+Copy `skills/learn-any-ai-project/SKILL.md` (Chinese) or `SKILL.en.md` (English) into your agent's skill directory (e.g. `~/.workbuddy/skills/learn-any-ai-project/SKILL.md`), then reload the agent. Both files are self-contained single files — no extra scripts, no bundled assets.
 
-### 3. What the skill creates at runtime
+### After installing — how to use it, step by step
+
+1. Open a chat in the project directory you want to learn, and say a trigger phrase: *"Learn this project systematically"* (also works: "generate a learning plan for this project", "build learning docs in handbook style").
+2. The skill runs **S0 Profile** — it probes the project and asks a few questions (type / scale / stack / stage / goal / environment constraints / sharing / language). Answer them.
+3. It derives a chapter map from first principles and renders **LEARN.md** in the project root.
+4. **Review gate**: read LEARN.md and confirm before any code is written — adjust chapters if they don't fit.
+5. Then chapter by chapter (S3 → S4 → S5):
+   - **Environment first** — you install deps and start daemon/GUI services yourself (the Agent never auto-launches them).
+   - **Each chapter** — the Agent explains and generates, runs a local green check, then hands you "hands-on points" to execute yourself; finally it syncs state to the ledger.
+   - **Each chapter close** — you do an oral recap (three questions) in the chat.
+6. **Blind rehearsal** at the end: with all commands hidden, run the minimal chain end-to-end yourself. Pass it and you have genuinely learned the project.
+
+### What the skill creates at runtime
 
 | Item | Where | Purpose |
 |---|---|---|

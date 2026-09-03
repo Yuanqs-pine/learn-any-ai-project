@@ -95,19 +95,19 @@ All AI projects share the base skeleton "environment → main line → evaluatio
 | Layer | Mainstream project type | Distinguishing core rings (unique beyond the base skeleton) |
 |---|---|---|
 | Application | LLM text apps (QA / summarization / translation / writing) | Prompt & output contract → evaluation set → regression → production monitoring |
-| Application | RAG knowledge-base QA (incl. GraphRAG variants) | Document / data preparation → retrieval adaptation (chunking / embedding / recall / rerank) → retrieval quality and generation quality evaluated separately → gates |
-| Application | Agents (tool calling / multi-step planning) | Tool definitions → planning loop → memory / context → guardrails → success-rate & cost evaluation |
-| Application | CV apps (classification / detection / segmentation / OCR) | Data & labeling → model / API selection → vision-metric evaluation (mAP / accuracy) → inference deployment |
-| Application | Speech apps (ASR / TTS / real-time voice dialogue) | Audio pipeline → service / model → speech-metric evaluation (WER / latency / MOS) → real-time verification |
-| Application | Multimodal apps (image-text / video understanding) | Multimodal input pipeline → context-window & image-resolution trade-offs → cross-modal consistency evaluation |
-| Application | AIGC generative tools (text-to-image / video / 3D / music) | Generation pipeline (base model + upscaling / post-processing) → subjective preference & consistency evaluation → content-safety guardrails |
-| Application | Recommender systems | Features → recall → ranking → offline / online metrics & A/B testing → real-time pipeline |
+| | RAG knowledge-base QA (incl. GraphRAG variants) | Document / data preparation → retrieval adaptation (chunking / embedding / recall / rerank) → retrieval quality and generation quality evaluated separately → gates |
+| | Agents (tool calling / multi-step planning) | Tool definitions → planning loop → memory / context → guardrails → success-rate & cost evaluation |
+| | CV apps (classification / detection / segmentation / OCR) | Data & labeling → model / API selection → vision-metric evaluation (mAP / accuracy) → inference deployment |
+| | Speech apps (ASR / TTS / real-time voice dialogue) | Audio pipeline → service / model → speech-metric evaluation (WER / latency / MOS) → real-time verification |
+| | Multimodal apps (image-text / video understanding) | Multimodal input pipeline → context-window & image-resolution trade-offs → cross-modal consistency evaluation |
+| | AIGC generative tools (text-to-image / video / 3D / music) | Generation pipeline (base model + upscaling / post-processing) → subjective preference & consistency evaluation → content-safety guardrails |
+| | Recommender systems | Features → recall → ranking → offline / online metrics & A/B testing → real-time pipeline |
 | Model | Classic ML & NLP pipelines (classification / regression / NER / sentiment) | Data exploration → feature engineering → training → evaluation → serving → monitoring |
-| Model | LLM fine-tuning & alignment training (LoRA / full-param / DPO / RLHF / distillation) | Training data → fine-tuning → alignment → evaluation regression (guard against catastrophic forgetting) → deployment comparison |
-| Model | AI data engineering (collection / cleaning / labeling / QC) | Data sources → cleaning / dedup → labeling / QC → versioning & lineage management |
+| | LLM fine-tuning & alignment training (LoRA / full-param / DPO / RLHF / distillation) | Training data → fine-tuning → alignment → evaluation regression (guard against catastrophic forgetting) → deployment comparison |
+| | AI data engineering (collection / cleaning / labeling / QC) | Data sources → cleaning / dedup → labeling / QC → versioning & lineage management |
 | Platform | Model inference / serving platforms (deployment / quantization / acceleration) | Model loading & batching → concurrency / latency / throughput → elasticity & monitoring |
-| Platform | AI gateways & observability platforms (multi-model routing / tracing) | Routing & fallback → rate limiting / circuit breaking → call tracing & billing |
-| Platform | Low-code AI application platforms (orchestration / knowledge bases / plugins) | Platform feature walk-through → orchestration chain (knowledge base / plugin) → end-to-end effect evaluation |
+| | AI gateways & observability platforms (multi-model routing / tracing) | Routing & fallback → rate limiting / circuit breaking → call tracing & billing |
+| | Low-code AI application platforms (orchestration / knowledge bases / plugins) | Platform feature walk-through → orchestration chain (knowledge base / plugin) → end-to-end effect evaluation |
 | Quality | AI testing & evaluation engineering (cross-cutting all layers above) | System under test → test assets (exam papers / baselines) → deterministic gates → evaluation reports → observability → security / red team → self-check closing |
 
 ### 5.4 Anti-Copy Check (mandatory after derivation)
